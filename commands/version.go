@@ -1,0 +1,16 @@
+package commands
+
+import (
+    "fmt"
+
+    "github.com/spf13/cobra"
+)
+
+var versionCmd = &cobra.Command{
+    Use:   "version",
+    Short: "Print the version of GDBGUI",
+    Long:  `All software has versions. This is GDBGUI's`,
+    Run: func(cmd *cobra.Command, args []string) {
+        fmt.Printf("GDBGUI - v%s\n", version)
+    },
+}
